@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-export const App = () => {
+const App = () => {
   const arr = ["Learn React", "Remove React Defaults", "Conquer the World"];
   let rand = Math.floor( Math.random() * arr.length );
   
