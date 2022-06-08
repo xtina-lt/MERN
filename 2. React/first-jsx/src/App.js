@@ -23,8 +23,11 @@ const App = () => {
                       {arr[rand]}
                     </span>
                   </li>
-                </ul>          
+                </ul>
+
+                <img src="https://i.pinimg.com/originals/fa/dc/5a/fadc5a2c36277247fd92f8d50da179e9.gif" alt="puppers"></img>          
             </div>
+            
             <div>
               <form action="/process" method="get">                                
                   <label htmlFor="email">Email:</label>                    
