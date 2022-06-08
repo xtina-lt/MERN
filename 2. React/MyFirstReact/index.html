@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>XTINA.CODES</title>
+    <link rel="stylesheet" href="style.css?value=3">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Lobster&display=swap" rel="stylesheet">
+    </head>
+    <body>
+    
+        <header>
+            Hello React
+        </header>
+        
+        <nav>
+            base_nav_content
+        </nav>
+        
+        <main>
+            <div id="root">
+                <h1>
+                    Rendering My First React Page
+                </h1>
+                <script crossorigin="" src="https://unpkg.com/react@16/umd/react.development.js"></script>
+                <script crossorigin="" src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script> 
+                <script>
+                    const arr = ['The elevator to success is out of order. You\'ll have to use the stairs', 'Work until your bank account looks like a phone number.', 'I always wanted to be somebody, but now I realize I should have been more specific.', 'If at first you don\'t succeed, then skydiving definitely isn\'t for you.']; 
+                    const rand = Math.floor(Math.random() * arr.length);
+                    const c = React.createElement("h1", {}, arr[rand]);
+                    ReactDOM.render(c, document.getElementById("root"));
+                </script>                
+            </div>
+        </main>
+    
+    </body>
+</html>
