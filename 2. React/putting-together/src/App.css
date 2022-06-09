@@ -164,7 +164,7 @@ button {
     margin: 1vh auto;
     transition-duration: 0.4s;
     /* background */
-    background-color: rgba(240, 248, 255, 0.2);
+    background-color: rgba(240, 248, 255, 0.1);
     /* border padding */
     border: 0.15vh rgba(0, 194, 175, 0.8) solid;
     border-radius: 1vh;
@@ -177,14 +177,6 @@ button {
 }
 
     button:hover {
-        background-image: 
-        linear-gradient(
-        to bottom right, 
-        rgba(0, 255, 255, 0.5), 
-        rgba(184, 212, 142, 0.5), 
-        rgba(128, 255, 212, 0.5));
-        border: none;
-        color: rgba(255, 255, 255, 0.7);
         transform: translateY(-0.25vh);
     }
 

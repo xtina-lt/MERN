@@ -7,7 +7,7 @@ import Person from './components/Person'
 function App() {
   return (
     <>
-    
+
       <Header title={"Putting Together"} />
       
       <main>
@@ -18,7 +18,7 @@ function App() {
           <Person
             first = {"XTINA"}
             last = {".CODES"}
-            experience = {"1 year"}
+            experience = {10}
             lang = {"JavaScript"}
             icon = {"🦄"}>
           </Person>
