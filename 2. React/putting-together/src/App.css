@@ -7,7 +7,7 @@
 	text-align: center;
 }
 	*::-webkit-scrollbar {
-  		display: none;
+    display: none;
 	}
 
 html{
@@ -48,29 +48,29 @@ html{
             font-family: lobster;
             animation: glow 1s ease-in-out infinite alternate;
         }
-        	 @keyframes glow {
-			  from {
-			    text-shadow: 0 0 0.2vh #fff, 0 0 0.4vh #fff, 0 0 0.6vh rgb(228, 204, 255), 0 0 0.8vh rgb(228, 204, 255), 0 0 0 1vh rgb(228, 204, 255);
-			  }
-			  
-			  to {
-			    text-shadow: 0 0 0.4vh #fff, 0 0 0.6vh rgba(240, 248, 255, 0.4), 0 0 0.8vh rgba(240, 248, 255, 0.4), 0 0 1vh rgba(240, 248, 255, 0.4), 0 0 1.2vh rgba(240, 248, 255, 0.4);
-			  }
-			}
+            @keyframes glow {
+                from {
+                text-shadow: 0 0 0.2vh #fff, 0 0 0.4vh #fff, 0 0 0.6vh rgb(228, 204, 255), 0 0 0.8vh rgb(228, 204, 255), 0 0 0 1vh rgb(228, 204, 255);
+                }
+                
+                to {
+                text-shadow: 0 0 0.4vh #fff, 0 0 0.6vh rgba(240, 248, 255, 0.4), 0 0 0.8vh rgba(240, 248, 255, 0.4), 0 0 1vh rgba(240, 248, 255, 0.4), 0 0 1.2vh rgba(240, 248, 255, 0.4);
+                }
+            }
         
         nav{
-        	background-color: rgba(240, 248, 255, 0.4);
-        	color: rgba(0, 194, 175, 0.8);
-        	border-radius: 2vh;
-        	margin: 1vh auto;
+            background-color: rgba(240, 248, 255, 0.4);
+            color: rgba(0, 194, 175, 0.8);
+            border-radius: 2vh;
+            margin: 1vh auto;
             padding: 1vh;
             font-size: 2vh;
             font-family: lobster;  	
         }
-        	nav > a {
-				margin-left: 2vh;
-				margin-right: 2vh;
-			}
+            nav > a {
+                margin-left: 2vh;
+                margin-right: 2vh;
+            }
 
 
         main{
@@ -94,20 +94,18 @@ html{
             padding: 1vh;
             margin: 2vh;
             height: max-content;
-		    animation: fadeInAnimation ease 5s;
-		    animation-iteration-count: 1;
-		    animation-fill-mode: forwards;
+                animation: fadeInAnimation ease 5s;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
 		}
 
-
-  
 			@keyframes fadeInAnimation {
-			    0% {
-			        opacity: 0;
-			    }
-			    inherit {
-			        opacity: 1;
-			     }
+                0% {
+                    opacity: 0;
+                }
+                inherit {
+                    opacity: 1;
+                }
 			}
 
 	
@@ -132,6 +130,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .emoji{
     font-size: 20vh;
+    display: block;
 }
 
 .inline{
@@ -159,6 +158,36 @@ img {
 		max-height: 83vh;
 		filter: grayscale(50%);
 	}
+
+button {
+    display: block;
+    margin: 1vh auto;
+    transition-duration: 0.4s;
+    /* background */
+    background-color: rgba(240, 248, 255, 0.2);
+    /* border padding */
+    border: 0.15vh rgba(0, 194, 175, 0.8) solid;
+    border-radius: 1vh;
+    padding: 0.5vh 2.5vh 0.5vh 2.5vh;
+    /* font */
+    font-size: 2vh;
+    font-family: lobster;
+    color: rgba(0, 194, 175, 0.6);
+    text-decoration: none;
+}
+
+    button:hover {
+        background-image: 
+        linear-gradient(
+        to bottom right, 
+        rgba(0, 255, 255, 0.5), 
+        rgba(184, 212, 142, 0.5), 
+        rgba(128, 255, 212, 0.5));
+        border: none;
+        color: rgba(255, 255, 255, 0.7);
+        transform: translateY(-0.25vh);
+    }
+
 
 /* FORMS */
 input, select, textarea, select:focus{
