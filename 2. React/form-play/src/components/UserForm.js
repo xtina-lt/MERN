@@ -37,9 +37,11 @@ const UserForm = (props) =>{
     // * USER OBJECT * 
     // *************** 
     const createUser = (e) => {
+        // stop reload
         e.preventDefault();
 
-        const newUser = {first, last, email, confirmE, password, confirmP};
+        // create the user object
+        const user = {first, last, email, confirmE, password, confirmP};
         setFirst("");
         setLast("");
         setEmail("");
@@ -50,7 +52,7 @@ const UserForm = (props) =>{
         // CHECK IF ALL INPUTS ARE VALID
         // either sumbit or reject
         if (validateAll()) {
-            console.log("Welcome, ", newUser);
+            console.log("Welcome, ", user);
             setSubmit(true); 
         } else {
             console.log("reject form");
