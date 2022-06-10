@@ -1,6 +1,6 @@
 import React from 'react';
 
-// GET A NEW QUOTE FOR EACH BUTTON CLICK / HIDE
+// GET A NEW QUOTE FOR EACH BUTTON CLICK / HIDEs
 const change = () => {   
     // DEFINE QUOTES
     let t = "Quote:";
