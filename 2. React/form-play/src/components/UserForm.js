@@ -65,77 +65,85 @@ const UserForm = (props) =>{
     const getSumbit = () => {return (isSubmit) ? "Thanks for sumbitting!" : "Please submit...";}
 
     return(
-        <div>
-            <h3>
-                {getSumbit()}
-            </h3>
-            <form onSubmit = { createUser }>
-                {/* first name */}
-                <label>
-                    First Name:
-                </label>
-                {(!validateFirst() && first.length > 0)? <p>Try 🥈 characters.</p>: null}
-                <input type="text" value={first} onChange={(e)=> setFirst(e.target.value)}/>
-                {/* last name */}
-                <label>
-                    Last Name:
-                </label>
-                {(!validateLast() && last.length > 0)? <p>Try 🥈 characters.</p>: null}
-                <input type="text" value={last} onChange={(e)=> setLast(e.target.value)}/>
-                {/* email */}
-                <label>
-                    Email
-                </label>
-                {(!validateEmail() && email.length > 0) ? <p>Try a VALID email 👼.</p> : null}
-                <input type="text" value={email} onChange={(e)=> setEmail(e.target.value)}/>
-                {/* confirm email */}
-                <label>
-                    Confirm Email
-                </label>
-                {(!validateConfirmE() && confirmE.length > 0) ? <p>Let's play the matching game🎮.</p> : null}
-                <input type="text" value={confirmE} onChange={(e)=> setConfirmE(e.target.value)}/>
-                {/* password */}
-                <label>
-                    Password:
-                </label>
-                {(!validatePassword() && password.length > 0) ? <p>Must be: 8 characters, 1 uppercase, 1 lowercase, 1 number, 1 special character.</p> : null}
-                <input type="password" value={password} onChange={(e)=> setPassword(e.target.value)}/>
-                {/* check password */}
-                <label>
-                    Confirm Password:
-                </label>
-                {(!validateConfirmP() && confirmP.length > 0) ? <p>Let's play the matching game🎮.</p> : null}
-                <input type="password" value={confirmP} onChange={(e)=> setConfirmP(e.target.value)}/>
-                {/* submit */}
-                <input type ="submit" value="Register"/>
-            </form>
-            {/* <table>
-                <tr>
-                    <td>
-                        Name:
-                    </td>
-                    <td>
-                        {last}, {first}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
+        <main>
+            <div>
+                <h2>
+                    {getSumbit()}
+                </h2>
+                <form onSubmit = { createUser }>
+                    {/* first name */}
+                    <label>
+                        First Name:
+                    </label>
+                    {(!validateFirst() && first.length > 0)? <p>Try 🥈 characters.</p>: null}
+                    <input type="text" value={first} onChange={(e)=> setFirst(e.target.value)}/>
+                    {/* last name */}
+                    <label>
+                        Last Name:
+                    </label>
+                    {(!validateLast() && last.length > 0)? <p>Try 🥈 characters.</p>: null}
+                    <input type="text" value={last} onChange={(e)=> setLast(e.target.value)}/>
+                    {/* email */}
+                    <label>
                         Email
-                    </td>
-                    <td>
-                        {email}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Password
-                    </td>
-                    <td>
-                        {password}
-                    </td>
-                </tr>
-                </table> */}
-        </div>
+                    </label>
+                    {(!validateEmail() && email.length > 0) ? <p>Try a VALID email 👼.</p> : null}
+                    <input type="text" value={email} onChange={(e)=> setEmail(e.target.value)}/>
+                    {/* confirm email */}
+                    <label>
+                        Confirm Email
+                    </label>
+                    {(!validateConfirmE() && confirmE.length > 0) ? <p>Let's play the matching game🎮.</p> : null}
+                    <input type="text" value={confirmE} onChange={(e)=> setConfirmE(e.target.value)}/>
+                    {/* password */}
+                    <label>
+                        Password:
+                    </label>
+                    {(!validatePassword() && password.length > 0) ? <p>Must be: 8 characters, 1 uppercase, 1 lowercase, 1 number, 1 special character.</p> : null}
+                    <input type="password" value={password} onChange={(e)=> setPassword(e.target.value)}/>
+                    {/* check password */}
+                    <label>
+                        Confirm Password:
+                    </label>
+                    {(!validateConfirmP() && confirmP.length > 0) ? <p>Let's play the matching game🎮.</p> : null}
+                    <input type="password" value={confirmP} onChange={(e)=> setConfirmP(e.target.value)}/>
+                    {/* submit */}
+                    <input type ="submit" value="Register"/>
+                </form>
+            </div>
+            <div>
+                <h2>
+                    In the Works...
+                </h2>
+                <img src = "https://emojipedia-us.s3.amazonaws.com/source/skype/289/cupcake_1f9c1.png" alt="cupcake"/>
+                <table>
+                    <tr>
+                        <td>
+                            Name:
+                        </td>
+                        <td>
+                            {last}, {first}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Email
+                        </td>
+                        <td>
+                            {email}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Password
+                        </td>
+                        <td>
+                            {password}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </main>
     )
 }
 

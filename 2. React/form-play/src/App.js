@@ -6,11 +6,7 @@ function App() {
   return (
     <>
       <Header title="Form Play"/>
-      <main>
-        <div className=''>
-          <UserForm/>
-        </div>
-      </main>
+      <UserForm/>
     </>
   );
 }
