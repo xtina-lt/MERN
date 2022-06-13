@@ -12,17 +12,19 @@ function App() {
     
       <Header title="Practice"/>
 
-      <Nav links={[
-        {name : "Creator", url : "//xtina.codes" },
-        {name : "Git", url : "https://github.com/xtina-lt/MERN/"}
-      ]}/>
+      <Nav>
+        { {name : "Creator", url : "//xtina.codes"} }
+        { {name : "Git", url : "https://github.com/xtina-lt/MERN/"} }
+      </Nav>
 
-      <Main e = {[
-          <SubContent e="Test"/>,
-          <SubContent e="Lets"/>,
-          <SubContent e="Go"/>
-        ]}
-      />
+      <Main>
+        <SubContent>
+          Hello
+        </SubContent>
+        <SubContent>
+          World
+        </SubContent>
+      </Main>
 
     </>
   );
