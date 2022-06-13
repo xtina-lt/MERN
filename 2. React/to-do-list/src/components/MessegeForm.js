@@ -15,11 +15,12 @@ const MessegeForm = (props) => {
 
     // // HANDLESUMBIT
     const handle = (e) => {
+        // always preventDefault
         e.preventDefault();
-        // CALL METHOD FROM APP
-        // send msg as arg
 
         if (validateAll()) {
+            // CALL METHOD FROM APP
+            // send msg as arg
             props.fx( msg );
             setMsg("");
             setSubmit(true);
