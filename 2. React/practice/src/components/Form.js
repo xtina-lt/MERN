@@ -10,25 +10,23 @@ const Form = (props) =>{
     }
 
     return (
-        <main>
             <div>
                 <form onSubmit={handle}>
-                    {/* input */}
-                    <label>
-                        <h2>
-                            Color my world....
-                        </h2>
-                    </label>
-                    <input type ="text" value={input} onChange={(e) => setInput(e.target.value)}/>
-                    {/* submit */}
-                    <input type = "submit" value="Go!"/>
+                        {/* input */}
+                        <label>
+                            <h2>
+                                Color my world....
+                            </h2>
+                        </label>
+                        <input type ="text" value={input} onChange={(e) => setInput(e.target.value)}/>
+                        {/* submit */}
+                        <input type = "submit" value="Go!"/>
                 </form>
-            </div>
 
-            <div id="blocks">
+                <div id="blocks">
 
+                </div>
             </div>
-        </main>
     )
 }
 

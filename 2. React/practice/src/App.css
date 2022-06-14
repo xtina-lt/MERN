@@ -127,6 +127,22 @@ h1, h2, h3, h4, h5, h6 {
     width: auto;
 }
 
+.tabs {
+    display: inline;
+    background-color: rgba(240, 248, 255, 0.1);
+    border: 0.15vh rgba(0, 194, 175, 0.8) solid;
+    border-radius: 1vh;
+}
+    .tab {
+        margin: 0.5vh;
+    }
+        .selected {
+            margin: 0.5vh;
+            padding: 0 1vh 0 1vh;
+            background-color: rgba(0, 194, 175, 0.8);
+            border-radius: 1vh;
+        }
+
 #blocks{
     display: flex;
 }

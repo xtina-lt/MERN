@@ -13,24 +13,25 @@ const UserForm = (props) =>{
     // *************** 
     // first name
     const [first, setFirst] = useState("");
-    const validateFirst = () => {return (first.length < 2) ? false : true;}
     // last name
     const [last, setLast] = useState("");
-    const validateLast = () => {return (last.length < 2) ? false : true;}
     // email
     const [email, setEmail] = useState("");
-    const validateEmail = () => {return ( email.match(re) ) ? true : false; }
     // confirm email
     const [confirmE, setConfirmE] = useState("");
-    const validateConfirmE = () => {return ( email.match(confirmE) ) ? true : false; }
     // passsword
     const [password, setPassword] = useState("");
-    const validatePassword = () => {return ( password.match(reP) ) ? true : false; }
     // confirm password
     const [confirmP, setConfirmP] = useState("");
-    const validateConfirmP = () => {return ( confirmP.match(password)) ? true : false; }
     // submit
     const [isSubmit, setSubmit] = useState(false);
+    // VALIDATIONS
+    const validateFirst = () => {return (first.length < 2) ? false : true;}
+    const validateLast = () => {return (last.length < 2) ? false : true;}
+    const validateEmail = () => {return ( email.match(re) ) ? true : false; }
+    const validateConfirmE = () => {return ( email.match(confirmE) ) ? true : false; }
+    const validatePassword = () => {return ( password.match(reP) ) ? true : false; }
+    const validateConfirmP = () => {return ( confirmP.match(password)) ? true : false; }
     const validateAll=()=>{return (validateFirst() && validateLast() && validateEmail() && validateConfirmE() && validatePassword() && validateConfirmP()) ? true : false;}
 
     // *************** 
@@ -112,36 +113,36 @@ const UserForm = (props) =>{
                 </form>
             </div>
             <div>
-                <h2>
-                    In the Works...
-                </h2>
-                <img src = "https://emojipedia-us.s3.amazonaws.com/source/skype/289/cupcake_1f9c1.png" alt="cupcake"/>
-                <table>
-                    <tr>
-                        <td>
-                            Name:
-                        </td>
-                        <td>
-                            {last}, {first}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Email
-                        </td>
-                        <td>
-                            {email}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Password
-                        </td>
-                        <td>
-                            {password}
-                        </td>
-                    </tr>
-                </table>
+            <h2>
+                In the Works...
+            </h2>
+            <img src = "https://emojipedia-us.s3.amazonaws.com/source/skype/289/cupcake_1f9c1.png" alt="cupcake"/>
+            <table>
+                <tr>
+                    <td>
+                        Name:
+                    </td>
+                    <td>
+                        {last}, {first}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email
+                    </td>
+                    <td>
+                        {email}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password
+                    </td>
+                    <td>
+                        {password}
+                    </td>
+                </tr>
+            </table>
             </div>
         </main>
     )
