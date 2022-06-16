@@ -43,18 +43,18 @@ const UserForm = (props) =>{
 
         // create the user object
         const user = {first, last, email, confirmE, password, confirmP};
-        setFirst("");
-        setLast("");
-        setEmail("");
-        setConfirmE("");
-        setPassword("");
-        setConfirmP("");
 
         // CHECK IF ALL INPUTS ARE VALID
         // either sumbit or reject
         if (validateAll()) {
             console.log("Welcome, ", user);
             setSubmit(true); 
+            setFirst("");
+            setLast("");
+            setEmail("");
+            setConfirmE("");
+            setPassword("");
+            setConfirmP("");
         } else {
             console.log("reject form");
         }
@@ -76,37 +76,37 @@ const UserForm = (props) =>{
                     <label>
                         First Name:
                     </label>
-                    {(!validateFirst() && first.length > 0)? <p>Try 🥈 characters.</p>: null}
+                    {!validateFirst() && first &&  <p>Try 🥈 characters.</p>}
                     <input type="text" value={first} onChange={(e)=> setFirst(e.target.value)}/>
                     {/* last name */}
                     <label>
                         Last Name:
                     </label>
-                    {(!validateLast() && last.length > 0)? <p>Try 🥈 characters.</p>: null}
+                    {!validateLast() && last && <p>Try 🥈 characters.</p>}
                     <input type="text" value={last} onChange={(e)=> setLast(e.target.value)}/>
                     {/* email */}
                     <label>
                         Email
                     </label>
-                    {(!validateEmail() && email.length > 0) ? <p>Try a VALID email 👼.</p> : null}
+                    {!validateEmail() && email && <p>Try a VALID email 👼.</p>}
                     <input type="text" value={email} onChange={(e)=> setEmail(e.target.value)}/>
                     {/* confirm email */}
                     <label>
                         Confirm Email
                     </label>
-                    {(!validateConfirmE() && confirmE.length > 0) ? <p>Let's play the matching game🎮.</p> : null}
+                    {!validateConfirmE() && confirmE && <p>Let's play the matching game🎮.</p>}
                     <input type="text" value={confirmE} onChange={(e)=> setConfirmE(e.target.value)}/>
                     {/* password */}
                     <label>
                         Password:
                     </label>
-                    {(!validatePassword() && password.length > 0) ? <p>Must be: 8 characters, 1 uppercase, 1 lowercase, 1 number, 1 special character.</p> : null}
+                    {!validatePassword() && password && <p>Must be: 8 characters, 1 uppercase, 1 lowercase, 1 number, 1 special character.</p>}
                     <input type="password" value={password} onChange={(e)=> setPassword(e.target.value)}/>
                     {/* check password */}
                     <label>
                         Confirm Password:
                     </label>
-                    {(!validateConfirmP() && confirmP.length > 0) ? <p>Let's play the matching game🎮.</p> : null}
+                    {!validateConfirmP() && confirmP && <p>Let's play the matching game🎮.</p>}
                     <input type="password" value={confirmP} onChange={(e)=> setConfirmP(e.target.value)}/>
                     {/* submit */}
                     <input type ="submit" value="Register"/>
