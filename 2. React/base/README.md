@@ -1,3 +1,8 @@
+# APP.JS
+    - creates useState output
+    - gets info from Form.js
+    - transfers info to Display.js
+    
 ## COMPONENTS >
 # FORM.JS:
     - gets output state from props
@@ -11,8 +16,3 @@
     - gets output state
     - logs props
     - displays submitted input as output state
-
-# APP.JS
-    - creates useState output
-    - gets info from Form.js
-    - transfers info to Display.js
