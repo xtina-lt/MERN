@@ -1,6 +1,6 @@
 import React, {useState} from  'react';
 
-const MessageDisplay = (props) => {
+const MessageDisplay = props => {
     return (
         <div>
             <h2>

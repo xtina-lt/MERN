@@ -14,7 +14,7 @@ const MessegeForm = (props) => {
     
 
     // // HANDLESUMBIT
-    const handle = (e) => {
+    const handle = e => {
         // always preventDefault
         e.preventDefault();
 
