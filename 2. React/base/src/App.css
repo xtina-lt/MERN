@@ -1,0 +1,260 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Lobster&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+    *::-webkit-scrollbar {
+    display: none;
+    }
+html{
+    /* background */
+    background-image: 
+    linear-gradient(
+    to bottom right, 
+    rgba(0, 255, 255, 0.8), 
+    rgba(184, 212, 142, 0.5), 
+    rgba(128, 255, 212, 0.8));
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    /* size */
+    width: 100vw;
+    height: 100vh;
+}
+    body{ /*WHOLE DOC*/
+        /* height and width */
+        width: 99vw;
+        height: 99vh;
+        margin: 0 auto;
+        /* font */
+        font-family: "Barlow Condensed";
+        font-size: 2vh;
+        color: rgba(0, 0, 0, 0.6);
+    }
+    
+        header{
+            background-color: rgba(240, 248, 255, 0.4);
+            color: rgba(0, 194, 175, 0.8);
+            border-radius: 2vh;
+            margin: 1vh auto;
+            padding: 1vh;
+            font-size: 5vh;
+            font-weight: bolder;
+            font-family: lobster;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+            @keyframes glow {
+                from {
+                text-shadow: 0 0 0.2vh #fff, 0 0 0.4vh #fff, 0 0 0.6vh rgb(228, 204, 255), 0 0 0.8vh rgb(228, 204, 255), 0 0 0 1vh rgb(228, 204, 255);
+                }
+                
+                to {
+                text-shadow: 0 0 0.4vh #fff, 0 0 0.6vh rgba(240, 248, 255, 0.4), 0 0 0.8vh rgba(240, 248, 255, 0.4), 0 0 1vh rgba(240, 248, 255, 0.4), 0 0 1.2vh rgba(240, 248, 255, 0.4);
+                }
+            }
+        
+        nav{
+            background-color: rgba(240, 248, 255, 0.4);
+            color: rgba(0, 194, 175, 0.8);
+            border-radius: 2vh;
+            margin: 1vh auto;
+            padding: 1vh;
+            font-size: 2vh;
+            font-family: lobster;   
+        }
+            nav > a {
+                margin-left: 2vh;
+                margin-right: 2vh;
+            }
+
+        main{
+            /* size */
+            height: 84vh;
+            max-height: 84vh;
+            width: 99vw;
+            margin: 0 auto;
+            /* scroll */
+            overflow: scroll;
+            scrollbar-width: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        main > div{
+            /* background and set */
+            background-color: rgba(240, 248, 255, 0.4);
+            border-radius: 3vh;
+            padding: 1vh;
+            margin: 2vh;
+            height: max-content;
+                animation: fadeInAnimation ease 5s;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+        }
+            @keyframes fadeInAnimation {
+                0% {
+                    opacity: 0;
+                }
+                inherit {
+                    opacity: 1;
+                }
+            }
+    
+/*HEADERS*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: Lobster;
+    color:rgba(0, 194, 175, 0.8);
+    padding: 0;
+    padding-bottom: 0.5vh;
+    margin: 0;
+}
+/* TEXT MANIPULATION */
+.accent{
+    color:rgba(0, 194, 175, 0.8);
+}
+.large{
+    font-size: 3vh;
+}
+.emoji{
+    font-size: 20vh;
+    display: block;
+}
+.inline{
+    display: inline;
+    width: auto;
+}
+/* LINKS */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+img {
+    filter: opacity(0.5) grayscale(1);
+    animation: fadeInAnimation ease 7s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    border-radius: 80%;
+    width: 25vw; /* width of container */
+    object-fit: cover;
+}
+    #erd{
+        max-width: min-content;
+        max-height: 83vh;
+        filter: grayscale(50%);
+    }
+button {
+    display: block;
+    margin: 1vh auto;
+    transition-duration: 0.4s;
+    /* background */
+    background-color: rgba(240, 248, 255, 0.1);
+    /* border padding */
+    border: 0.15vh rgba(0, 194, 175, 0.8) solid;
+    border-radius: 1vh;
+    padding: 0.5vh 2.5vh 0.5vh 2.5vh;
+    /* font */
+    font-size: 2vh;
+    font-family: lobster;
+    color: rgba(0, 194, 175, 0.6);
+    text-decoration: none;
+}
+    button:hover {
+        transform: translateY(-0.25vh);
+    }
+
+/* FORMS */
+input, select, textarea, select:focus{
+    /* background and border */
+    background-color: rgba(240, 248, 255, 0.6);
+    border: none;
+    border-radius: 2vh;
+    outline: none;
+    /* size */
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1vh 2vh;
+    margin: 1vh 0;
+    resize: none;
+    /* font */
+    font-family: "Barlow Condensed";
+    font-size: 2vh;
+    color: rgba(0, 0, 0, 0.6);
+}
+    .minWidth{
+        width: max-content;
+        min-width: 35vw;
+    }
+/* TABLES */
+table{
+    border-collapse: collapse;
+    box-sizing: border-box;
+    background-color: rgba(204, 255, 244, 0.2);
+    border: none;
+    /* padding and margin */
+    padding: 1vh;
+    margin: 1vh auto;
+    table-layout: fixed;
+    word-wrap:break-word;
+}
+    th {
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        background-color: rgba(0, 194, 175, 0.8);
+        color: white;
+        }
+    td, th {
+    border: 1px solid rgba(240, 248, 255, 0.3);
+    padding: 8px;
+    }
+    
+    tr:nth-child(even){
+        background-color: rgba(240, 248, 255, 0.15);
+    }
+    tr:hover {
+        background-color: rgba(240, 248, 255, 0.5);
+    }
+ul {
+    list-style-type: none;
+    }    
+        ul > li{
+            margin: 2vh;
+        }
+/*Tablet 800 Half 1000 */
+@media only screen and (max-width: 1000px) {
+    main{
+        display: block;
+    }
+        main > div{
+            margin: 1vh auto;
+            width:max-content;
+            max-width: 95vw;
+        }
+    .minWidth{
+        min-width: 75vw;
+    }
+    img{
+        width: 45vh;
+        max-width: 80vw;
+    }
+}
+/* Phone is 600px*/
+@media only screen and (max-width: 600px) {
+    img{
+        width: 50vh;
+        max-width: 98vw;
+    }
+    main{
+        display: block;
+    }
+        main > div{
+            margin: 1vh auto;
+            width:max-content;
+            max-width: 95vw;
+        }
+    .minWidth{
+        min-width: 90vw;
+    }
+}
