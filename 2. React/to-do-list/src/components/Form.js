@@ -4,7 +4,7 @@ const Form = props => {
     const {list, setList} = props;
     const [input, setInput] = useState("");
 
-    const submit = (e) => {
+    const handle = (e) => {
         e.preventDefault();
         setList([...list,
             {content: input, complete : false}
@@ -16,7 +16,7 @@ const Form = props => {
             <h2>
                 Add Item:
             </h2>
-            <form onSubmit = {submit}>
+            <form onSubmit = {handle}>
                 <input type="text" value={input} onChange={(e)=>setInput(e.target.value)}/>
                 <input type="Submit" value="Do"/>
             </form>

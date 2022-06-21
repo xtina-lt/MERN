@@ -3,13 +3,12 @@ import React, {useState} from 'react'
 import Header from './components/Header'
 import Form from './components/Form'
 import Display from './components/Display'
-// import Parent from './components/Parent'
-// import Groceries from './components/Groceries'
+// MESSAGE PROJECT
 // import MessegeForm from './components/MessegeForm'
 // import MessageDisplay from './components/MessageDisplay'
 
 function App() {
-  // MESSAGE
+  // MESSAGE PROJECT
   // const [current, setCurrent] = useState("There are none")
   // const youveGotMail = e => {setCurrent(e);}
 
@@ -24,14 +23,8 @@ function App() {
       <Header title="Header Prop"/>
 
       <main>
-        {/* <Parent title="---Component---">
-          <span>- I am a child</span>
-          <span>- & I....</span>
-          <span>- && me!!</span>
-        </Parent> */}
 
-        {/* <Groceries/> */}
-
+        {/* MESSAGE PROJECT */}
         {/* <MessegeForm fx={ youveGotMail }/>
         <MessageDisplay message={current}/> */}
 
