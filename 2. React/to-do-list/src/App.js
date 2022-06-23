@@ -28,6 +28,7 @@ function App() {
         {/* <MessegeForm fx={ youveGotMail }/>
         <MessageDisplay message={current}/> */}
 
+        {/* use key={list.id} when you evolve and use id's */}
         <Form list={list} setList={setList} />
 
         <Display list={list} setList={setList}/>
