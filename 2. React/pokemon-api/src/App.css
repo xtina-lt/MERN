@@ -80,8 +80,9 @@ html{
             overflow: scroll;
             scrollbar-width: none;
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
-            justify-content: center;
+            justify-content: space-evenly;
         }
         main > div{
             /* background and set */
@@ -224,14 +225,6 @@ ul {
         }
 /*Tablet 800 Half 1000 */
 @media only screen and (max-width: 1000px) {
-    main{
-        display: block;
-    }
-        main > div{
-            margin: 1vh auto;
-            width:max-content;
-            max-width: 95vw;
-        }
     .minWidth{
         min-width: 75vw;
     }
@@ -246,14 +239,6 @@ ul {
         width: 50vh;
         max-width: 98vw;
     }
-    main{
-        display: block;
-    }
-        main > div{
-            margin: 1vh auto;
-            width:max-content;
-            max-width: 95vw;
-        }
     .minWidth{
         min-width: 90vw;
     }

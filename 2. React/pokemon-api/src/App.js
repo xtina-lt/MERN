@@ -1,13 +1,15 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import './App.css';
 import Header from './components/Header'
 import Nav from './components/Nav'
-import Coin from './components/Coin'
+// import Coin from './components/Coin'
+import StarWars from './components/StarWars';
 
 function App() {
+  const [header, setHeader] = useState("");
   return (
     <>
-      <Header title="Pokemon Api"/>
+      <Header title={header}/>
 
       <Nav>
         {[
@@ -17,8 +19,8 @@ function App() {
       </Nav>
 
       <main>
-        <Coin/>
-
+        {/* <Coin header={header} setHeader={setHeader}/> */}
+        <StarWars header={header} setHeader={setHeader}/>
       </main>
     </>
   );

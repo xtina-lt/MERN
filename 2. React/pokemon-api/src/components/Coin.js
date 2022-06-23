@@ -1,7 +1,14 @@
-import { useState } from 'react'
+import React from 'react'
 
-const Coin = () => {
+const Coin = props => {
+    // header
+    const {header, setHeader} = props;
+    setHeader("Coin Log");
+
+    // PROGRAM
+    // generate random coin
     const getCoin = () => { return (Math.random() > 0.5) ? "heads" : "tails"; }
+    // promise
     const play = () => {
         return new Promise((resolve, reject) => {
             // logic
@@ -19,6 +26,7 @@ const Coin = () => {
             (count < max) ? resolve('just in time') : reject('maxed out');
         })
     }
+    // invoke
     play()
     .then(e => console.log(e))
     .catch(e => console.log(e))
