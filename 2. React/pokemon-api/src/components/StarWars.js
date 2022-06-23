@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react'
-import Header from './Header';
 
 const StarWars = props => {
-    const {header, setHeader} = props;
+    const {setHeader} = props;
     setHeader("Star Wars");
     const [state, setState] = useState([]);
     

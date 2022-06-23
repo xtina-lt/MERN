@@ -3,7 +3,8 @@ import './App.css';
 import Header from './components/Header'
 import Nav from './components/Nav'
 // import Coin from './components/Coin'
-import StarWars from './components/StarWars';
+// import StarWars from './components/StarWars';
+import PokemonAPI from './components/PokemonAPI';
 
 function App() {
   const [header, setHeader] = useState("");
@@ -19,8 +20,9 @@ function App() {
       </Nav>
 
       <main>
-        {/* <Coin header={header} setHeader={setHeader}/> */}
-        <StarWars header={header} setHeader={setHeader}/>
+        {/* <Coin setHeader={setHeader}/> */}
+        {/* <StarWars setHeader={setHeader}/> */}
+        <PokemonAPI setHeader={setHeader}/>
       </main>
     </>
   );

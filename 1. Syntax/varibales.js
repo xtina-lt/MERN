@@ -1,5 +1,5 @@
 let arr = [1,2,3]
-console.log(arr[arr.length-1]);
+// console.log(arr[arr.length-1]);
 
 
 const groceryList = Object.freeze([
@@ -10,4 +10,11 @@ const groceryList = Object.freeze([
     { "item": "butter", "haveIngredient": true }
 ]);
 
-console.log(  );
+// console.log( groceryList );
+
+const obj = {
+    name : "test",
+    getName() {return this.name;}
+}
+
+console.log(obj.getName());
