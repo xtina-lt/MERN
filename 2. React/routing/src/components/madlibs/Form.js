@@ -33,7 +33,8 @@ const Form = props => {
             <form onSubmit={handleSubmit}>
                 {/* input 1 */}
                 <label>
-                <select onClick={((e)=>{setOne(e.target.value)})}>
+                    Character:
+                    <select onClick={((e)=>{setOne(e.target.value)})}>
                         <option value="Easter Bunny">
                             Easter Bunny
                         </option>
@@ -62,6 +63,7 @@ const Form = props => {
                 </label>
                 {/* input three */}
                 <label>
+                    Quote:
                     <select onClick={((e)=>{setThree(e.target.value)})}>
                         <option value="Pies, fies, and Fourth of July">
                             Pies, fies, and Fourth of July!
