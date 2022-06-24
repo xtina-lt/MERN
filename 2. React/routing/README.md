@@ -1,3 +1,11 @@
+### APP.JS
+- BrowserRouter
+- Routes
+- Route
+- path
+- exact path
+- path paramaters
+
 ### MADLIBS
 > components > madlibs > Form.js & Results.js
 > src > screenshot.png
@@ -5,12 +13,15 @@
 - state
 - useNavigate()
 - onClick()
+
 ## SITE ADDITIONS
 > components > site > Catchall.js, Home.js, Header.js, Nav.js
 - routes with  Catchall and home
+
 ## LOCATION
 > components > practice > Location.js
 - useParams()
+
 ## ASSIGNMENT
 - useParams()
 - isNaN()
