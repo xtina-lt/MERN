@@ -17,7 +17,7 @@ import {
 function App() {
   const [header, setHeader] = useState("Yolo");
   const [data, setData] = useState([]);
-  
+
   return (
     <BrowserRouter>
       <Header title={header} />
@@ -52,12 +52,12 @@ function App() {
           } />
           {/* city */}
           <Route path="/location/:city/:num" element={
-            <Location setHeader={setHeader}/>
-          }/>
+            <Location setHeader={setHeader} />
+          } />
           {/* ASSIGNMENT */}
-              <Route path="/assignment/:x/:color" element={
-            <Assignment setHeader={setHeader}/>
-          }/>
+          <Route path="/assignment/:x/:color" element={
+            <Assignment setHeader={setHeader} />
+          } />
         </Routes>
       </main>
     </BrowserRouter>
@@ -65,3 +65,6 @@ function App() {
 }
 
 export default App
+
+
+
