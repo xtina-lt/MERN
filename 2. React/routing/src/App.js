@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import './App.css';
-import Header from './components/site/Header'
-import Nav from './components/site/Nav'
 import Home from './components/site/Home'
 import Catchall from './components/site/Catchall'
 import Form from './components/madlibs/Form.js'
@@ -12,22 +10,28 @@ import {
   BrowserRouter,
   Routes,
   Route,
+  NavLink
 } from "react-router-dom";
 
 function App() {
   const [header, setHeader] = useState("Yolo");
   const [data, setData] = useState([]);
+  const [links, setLinks] = useState([{ href: "/", title: "Home" }, { href: "/form", title: "MadLibs" }])
 
   return (
     <BrowserRouter>
-      <Header title={header} />
+      <header>
+        {header}
+      </header>
 
-      <Nav>
-        {[
-          { href: "/", title: "Home" },
-          { href: "/form", title: "MadLibs" }
-        ]}
-      </Nav>
+      <nav>
+        {links.map((e,i)=>
+          // eslint-disable-next-line
+          <NavLink key={i} to={e.href}>
+              {e.title}
+          </NavLink> 
+        )} 
+      </nav>
 
       <main>
         {/* ROUTES */}
