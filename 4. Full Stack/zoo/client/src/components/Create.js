@@ -55,7 +55,7 @@ const CreateForm = (props) => {
                     </label>
                     <label>
                         Interests:
-                        <input type="text" value={interests} onChange={e=>setInterests(e.target.value)}/>
+                        <input type="text" value={interests} onChange={e=>setInterests(e.target.value.split(","))}/>
                     </label>
                     <input type="submit"/>
                 </form>
