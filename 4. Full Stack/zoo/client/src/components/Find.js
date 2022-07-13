@@ -56,7 +56,7 @@ const Find = props => {
                             {e.age}
                         </td>
                         <td>
-                            {e.interests}
+                            {e.interests.join(', ')}
                         </td>
                         <td>
                             {e.createdAt}

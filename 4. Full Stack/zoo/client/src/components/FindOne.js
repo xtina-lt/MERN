@@ -65,7 +65,7 @@ const FindOne = props => {
                         {data.age}
                     </td>
                     <td>
-                        {data.interests}
+                        {data.interests.join(', ')}
                     </td>
                     <td>
                         {data.createdAt}
