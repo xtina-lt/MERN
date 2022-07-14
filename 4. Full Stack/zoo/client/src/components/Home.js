@@ -1,7 +1,10 @@
 import React from "react";
 
 const Yay = () => {
+    //  VARIABLES
     const emojis = ['🙈','🙊', '🙉','🦁','🐶','🐺','🐱','🐯','🦒','🐮','🦝','🦊','🐷','🐭','🐰','🐸','🐨','🐻','🐼','🐴','🐔']
+    
+    // USER INTERFACE
     return(
         <>
             {

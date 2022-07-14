@@ -1,19 +1,36 @@
 import React, {useState} from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
 const CreateForm = (props) => {
-    const {setHeader} = props;
-    setHeader('Animal');
 
+    setHeader('Animal')
+    /*************
+     * VARIABLES *
+     *************/
+    // faker id
     const faker = require('faker')
     const[_id, setId] = useState(faker.datatype.uuid())
-    const[name, setName] = useState(faker.name.firstName());
-    const[species, setSpecies] = useState(faker.animal.type());
-    const[age, setAge] = useState(faker.datatype.number(20));
+    // other object variables
+    const[name, setName] = useState(faker.name.firstName())
+    const[species, setSpecies] = useState(faker.animal.type())
+    const[age, setAge] = useState(faker.datatype.number(20))
     const[interests, setInterests] = useState(['sleep, eat'])
     const[createdAt, setCreatedAt] = useState(Date())
+    // success
     const[success, setSuccess] = useState(false)
+    // navigation
+    const navigate = useNavigate()
+    // initialize setheader function from props state
+    const {setHeader} = props
+
+    /**************************
+     *         LOGIC          *
+     **************************/
+    // change header using data info
+    setHeader("Create")
     
+    // update, reset random inputs, change success, navigate away
     const handleSubmit = e => {
         // prevent default
         e.preventDefault();
@@ -31,13 +48,15 @@ const CreateForm = (props) => {
         setInterests(['sleep, eat'])
         setCreatedAt(Date())
         setSuccess(true)
+        navigate('/animals')
     }
+
+    /***********************
+     *    USER INTERFACE   *
+     **********************/
     return(
         <>
             <div className='minWidth'>
-                <h2>
-                    Create Animal
-                </h2>
                 {/* show success */}
                 {success && "Animalistic Success!"}
                 <form onSubmit={handleSubmit}>
