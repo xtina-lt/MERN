@@ -14,9 +14,12 @@ html{
     background-image: 
     linear-gradient(
     to bottom right, 
-    rgba(0, 255, 255, 0.8), 
-    rgba(184, 212, 142, 0.5), 
-    rgba(128, 255, 212, 0.8));
+    /* blue rgba(0, 255, 255, 0.8),  */
+    rgb(144, 238, 144),
+    /* green rgba(184, 212, 142, 0.5),  */
+    rgb(254, 250, 224),
+    /* blue green 128, 255, 212, 0.8 */
+    rgb(212, 163, 115));
     background-position: center;
     background-size: auto;
     background-repeat: no-repeat;
@@ -37,7 +40,7 @@ html{
     
         header{
             background-color: rgba(240, 248, 255, 0.4);
-            color: rgba(0, 194, 175, 0.8);
+            color: rgba(117, 189, 117, 0.8);
             border-radius: 2vh;
             margin: 1vh auto;
             padding: 1vh;
@@ -58,7 +61,7 @@ html{
         
         nav{
             background-color: rgba(240, 248, 255, 0.4);
-            color: rgba(0, 194, 175, 0.8);
+            color: rgba(117, 189, 117, 0.8);
             border-radius: 2vh;
             margin: 1vh auto;
             padding: 1vh;
@@ -107,14 +110,14 @@ html{
 /*HEADERS*/
 h1, h2, h3, h4, h5, h6 {
     font-family: Lobster;
-    color:rgba(0, 194, 175, 0.8);
+    color:rgba(117, 189, 117, 0.8);
     padding: 0;
     padding-bottom: 0.5vh;
     margin: 0;
 }
 /* TEXT MANIPULATION */
 .accent{
-    color:rgba(0, 194, 175, 0.8);
+    color:rgba(117, 189, 117, 0.8);
 }
 .large{
     font-size: 3vh;
@@ -153,13 +156,13 @@ button {
     /* background */
     background-color: rgba(240, 248, 255, 0.1);
     /* border padding */
-    border: 0.15vh rgba(0, 194, 175, 0.8) solid;
+    border: 0.15vh rgba(117, 189, 117, 0.8) solid;
     border-radius: 1vh;
     padding: 0.5vh 2.5vh 0.5vh 2.5vh;
     /* font */
     font-size: 2vh;
     font-family: lobster;
-    color: rgba(0, 194, 175, 0.6);
+    color: rgba(117, 189, 117, 0.8);
     text-decoration: none;
 }
     button:hover {
@@ -191,7 +194,7 @@ input, select, textarea, select:focus{
 table{
     border-collapse: collapse;
     box-sizing: border-box;
-    background-color: rgba(204, 255, 244, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
     border: none;
     /* padding and margin */
     padding: 1vh;
@@ -202,8 +205,8 @@ table{
     th {
         padding-top: 1vh;
         padding-bottom: 1vh;
-        background-color: rgba(0, 194, 175, 0.8);
-        color: white;
+        background-color: rgba(117, 189, 117, 0.8);
+        color: rgba(255, 255, 255, 0.9);
         }
     td, th {
     border: 1px solid rgba(240, 248, 255, 0.3);
@@ -211,10 +214,10 @@ table{
     }
     
     tr:nth-child(even){
-        background-color: rgba(240, 248, 255, 0.15);
+        background-color: rgba(255, 255, 255, 0.15);
     }
     tr:hover {
-        background-color: rgba(240, 248, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.5);
     }
 ul {
     list-style-type: none;
