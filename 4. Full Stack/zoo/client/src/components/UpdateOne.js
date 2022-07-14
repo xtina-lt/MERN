@@ -2,10 +2,8 @@
 import React, {useEffect, useState} from 'react'
 // use for requests to db
 import axios from 'axios'
-// get parameter
-import {Navigate, useParams} from "react-router-dom"
-// navigate once form is sumbitted
-import {useNavigate} from "react-router-dom"
+// navigate once form is sumbitted, get parameter
+import {useNavigate, useParams} from "react-router-dom"
 
 const UpdateOne = props => {
     /*************
