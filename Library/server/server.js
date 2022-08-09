@@ -1,13 +1,31 @@
-const port = 8000
-const express = require('express')
+require('dotenv').config()
+// express: js framework - interface to Node Server
+const express = require('express');
+const app = express();
 const cors = require('cors')
-const app = express()
+const cookieParser = require('cookie-parser')
+const PORT = process.env.PORT;
 
-app.use(express.json())
-app.use(express.urlencoded({extended:true}))
-app.use(cors())
 
-require('./routes/users.routes')(app)
+app.use( express.json() )
+app.use( express.urlencoded({extended:true}) )
+app.use(cors({credentials: true, origin: 'http://localhost:3000'}));
+app.use(cookieParser())
+
+// cors cross-origin requests
+// app.use( cors() )
+// session cors
+// connect to mongooese and routes
 require('./config/mongoose')
+require('./routes/users.routes')(app)
+require('./routes/likes.routes')(app)
 
-app.listen( port, ()=>console.log(`Party on port: ${port}`) )
+// middleware for cookies
+
+// read enviroment variables
+// app listen to port
+app.listen(PORT, () => console.log(`Party on port: ${PORT}`) );
+
+
+// LOGIN REG INSTALL
+// npm i bcrypt dotenv cookie-parser jsonwebtoken

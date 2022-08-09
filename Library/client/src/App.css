@@ -1,38 +1,364 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Lobster&family=Codystar&family=Permanent+Marker&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.9);
+}
+    *::-webkit-scrollbar {
+        display: none;
+        }
+
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        inherit {
+            opacity: 1;
+        }
+    }
+
+    @keyframes glow {
+        from {
+        text-shadow: 0 0 0.2vh #fff, 0 0 0.4vh #fff, 0 0 0.6vh rgb(228, 204, 255), 0 0 0.8vh rgb(228, 204, 255), 0 0 0 1vh rgb(228, 204, 255);
+        }
+        
+        to {
+        text-shadow: 0 0 0.4vh #fff, 0 0 0.6vh rgba(240, 248, 255, 0.4), 0 0 0.8vh rgba(240, 248, 255, 0.4), 0 0 1vh rgba(240, 248, 255, 0.4), 0 0 1.2vh rgba(240, 248, 255, 0.4);
+        }
+    }
+
+/* LINKS */
+a {
+    font-size: 2vh;
+    color: rgba(0, 0, 0, 0.9);
+    text-decoration: none;
+}
+    a:hover{
+        transform: translateY(-0.25vh);
+        color: rgba(127, 255, 212, 0.7);
+    }
+
+/*  SITE PAGE */
+html{
+    /* size */
+    height: 100vh;
+    width: 100vw;
+    /* background */
+    background-image: url(./static/threequarters.gif);
+    background-size: cover;
+    /* font */
+    font-family: "Permanent Marker";
+    font-size: 2vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header{
+    /* background border */
+    background-color: rgba(0, 255, 255, 0.6);
+    border-radius: 8vh;
+    /* margin */
+    margin: 1vh;
+    padding: 1vh;
+    /* font */
+    font-family: codystar;
+    font-weight: bolder;
+    font-size: 9vh;
+    /* scroll */
+    overflow-y: scroll;
+    scrollbar-width: none;
+    /* fade in */
+    animation: fadeInAnimation ease 5s, glow 1s ease-in-out infinite alternate;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav{
+    /* background and border */
+    background-color: rgba(127, 255, 212, 0.7);
+    border-radius: 8vh;
+    /* margin padding */
+    margin: 0.5vh;
+    padding: 0.5vh;
+    /* flex */
+    display: flex;
+    justify-content: space-evenly;
+    /* animation */
+    animation: fadeInAnimation ease 5s, glow 2s ease-in-out infinite alternate;
+}
+    nav > a{
+        font-size: 2.5vh;
+    }
+    nav > a:hover {
+        color: rgba(0, 0, 0, 0.9);
+    }
+
+    main {
+        /* display */
+        display: inline-flex;
+        justify-content: space-evenly;
+        align-items: center;
+        /* size */
+        width: 100vw;
+        height: 80vh;
+        /* scroll */
+        overflow-y: scroll;
+        scrollbar-width: none;
+    }
+    main > div {
+        background-color: rgba(112, 56, 168, 0.7);
+        border-radius: 4vh;
+        /* size */
+        max-width: min-content;
+        max-height: 78vh;
+        padding: 1vh;
+        /* scroll */
+        overflow-y: scroll;
+        scrollbar-width: none;
+        /* animation */
+        animation: fadeInAnimation ease 8s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+        main > div > div {
+            max-height: 81vh;
+            background-color: rgba(138, 43, 226, 0.8);
+            border-radius: 4vh;
+            /* size */
+            margin: 0.5vh auto;
+            padding: 1vh;
+            /* width */
+            max-width: fit-content;
+            max-height: 78vh;
+            /* font */
+            font-weight: lighter;
+        }
+
+        main > div > div > div{
+            background-color: red;
+            margin: 1vh 0 1vh 0;
+        }
+
+        #about-me{
+            background-color: rgba(220, 20, 120, 0.6);
+            max-width: 25vh;
+            /* animation */
+            animation: fadeInAnimation ease 8s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+/* SPECIFIC */
+.no-background{
+    background-color: rgba(255, 255, 255, 0);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+/* TEXT */
+h1, h2, h3, h4, h5, h6 {
+    font-family: Lobster;
+    background-color: rgba(220, 20, 120, 0.6);
+    text-shadow: 0 0 2.2vh rgba(255, 255, 255, 0.9);
+    border-radius: 8vh;
+    margin: 1vh auto;
+    padding: 0 6vh;
 }
 
-.App-link {
-  color: #61dafb;
+.accent{
+    color:rgba(0, 0, 0, 0.8);
+    text-shadow: 0 0 0.2vh rgba(255, 255, 255, 0.9);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.emoji{
+    font-size: 10vh;
+}
+
+/* images */
+img {
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
+}
+#me{
+    border-radius: 80%;
+}
+
+/* TABLES */
+table{
+    border-collapse: collapse;
+    width: 100%;
+    background-color: rgba(240, 248, 255, 0.15);
+    margin-bottom: 1vh;
+}
+    td, th {
+        border: 1px solid rgba(240, 248, 255, 0.4);
+        padding: 8px;
+    }
+    tr:nth-child(even){
+        background-color: rgba(240, 248, 255, 0.3);
+    }
+        tr:hover {
+            background-color: rgba(240, 248, 255, 0.6);
+        }
+    th {
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        text-align: center;
+        background-color: rgba(123, 216, 219, 0.8);
+        color: white;
+    }
+
+/* FORMS */
+input, select, textarea, select:focus{
+    /* background and border */
+    background-color: rgba(240, 248, 255, 0.6);
+    border-radius: 2vh;
+    border: none;
+    outline: none;
+    /* size */
+    display: block;
+    padding: 1vh 2vh;
+    margin: 1vh auto;
+    width: 50vh;
+    /* font */
+    font-family: "Permanent Marker";
+    font-size: 2vh;
+    color: rgb(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+    input[type=submit]{
+        font-family: Lobster;
+        color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        margin-top: 2vh;
+        /* animation */
+        animation: glow 3s ease-in-out infinite alternate;
+    }
+
+/* buttons */
+button{
+    /* background */
+    background-color: rgba(72, 15, 102, 0.7);
+    border: none;
+    border-radius: 1vh;
+    /* padding margin */
+    padding: 0 2vh;
+    /* font */
+    font-family: "Permanent Marker";
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.5vh;
+    /* button specific */
+    transition-duration: 0.7s;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color:rgba(123, 216, 219, 0.9);
+        color: rgba(253, 252, 252, 0.7);
+    }
+
+    .like-button{
+        background-color: rgba(72, 15, 102, 0);
+        display: block;
+        margin: 0 auto;
+    }
+
+/* LISTS */
+ul {
+    padding: 0;
+    margin: 0;
+}
+    ul > li{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+/*************/
+/*  MEDIA   */
+/* QUIERIES */
+/*************/
+
+/* TABLETS */
+@media only screen and (max-width: 1150px){
+    header{
+        font-size: 10vw;
+    }
+    nav > a{
+        font-size: 2vh;
+    }
+    main{
+        background-color: rgba(255, 255, 0, 0.1);
+        height: 80vh;
+        width: 100vw;
+    }
+    #about-me{
+        min-width: min-content;
+        max-width: min-content;
+    }
+    main > div {
+        max-width: 70vw;
+        min-width: 45vw;
+        width: max-content;
+        margin:  1vh;
+    }
+    main > div > div {
+        max-width: 99vw;
+        margin: 1vh;
+        overflow: scroll;
+        scrollbar-width: none;
+    }
+    input, form {
+        width: 100%;
+    }
+    input[type=text], input[type=password]{
+        width: 85%;
+    }
+    table, tr, td, th {
+        font-size: 2vw;
+        padding: 0;
+    }
+    input {
+        width: auto;
+    }
+} 
+
+/* PHONES */
+@media only screen and (max-width: 500px){
+    header{
+        font-size: 3em;
+        padding: 0.5vh;
+    }
+    nav{
+        font-size: 1vh;
+        padding: 0.5vh;
+    }
+    main {
+        background-color: rgba(255, 192, 203, 0.2);
+        height: 84.5vh;
+        display: block;
+    }
+        main > div {
+            font-size: 2vh;
+            max-width: 99vw;
+            margin: 1vh auto;
+            padding: 0;
+        }
+        #about-me{
+            max-width: 99vw;
+        }
+
+        main > div > div {
+            width: 94vw;
+            margin: 1vh auto;
+        }
+
+        /* FORMS */
+        input, label, select, textarea, select:focus{
+            font-size: 2vh;
+            width: 90%;
+            margin: 1vh auto;
+        }
+            input[type=submit]{
+                width: min-content;
+            }
+        
+        table, td, th, tr{
+            font-size: 2vh;
+        }
 }
